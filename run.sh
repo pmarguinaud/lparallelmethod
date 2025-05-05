@@ -1,11 +1,16 @@
 #!/bin/bash
 
 set -e
+set -x
 
-for method in OPENMP OPENMPSINGLECOLUMN OPENACCSINGLECOLUMN
+for method in OPENACCSINGLECOLUMN # OPENMP OPENMPSINGLECOLUMN
 do
   cp lparallelmethod.txt.$method lparallelmethod.txt
-  ./main.x < input.txt > output.txt.$method
+  \rm -f output.txt
+# nsys profile -f true -o $method.qdrep \
+  ./main.x 
+  \mv output.txt output.txt.$method
   diff output.txt.$method ref/output.txt.$method
+  \rm -f output.txt.$method
 done
 
