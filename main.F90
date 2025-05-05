@@ -31,6 +31,6 @@ CALL CPU_TIME (ZF)
 CLOSE (99)
 CLOSE (88)
 
-PRINT *, ZF - ZS
+WRITE (*, '(F18.6)') ZF - ZS
 
 END
