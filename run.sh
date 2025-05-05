@@ -3,7 +3,7 @@
 set -e
 set -x
 
-for method in OPENACCSINGLECOLUMN # OPENMP OPENMPSINGLECOLUMN
+for method in OPENACCSINGLECOLUMN OPENMP OPENMPSINGLECOLUMN
 do
   cp lparallelmethod.txt.$method lparallelmethod.txt
   \rm -f output.txt
