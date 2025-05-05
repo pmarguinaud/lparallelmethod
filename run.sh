@@ -11,6 +11,6 @@ do
   ./main.x 
   \mv output.txt output.txt.$method
   diff output.txt.$method ref/output.txt.$method
-  \rm -f output.txt.$method
+  \rm -f output.txt.$method lparallelmethod.txt
 done
 
