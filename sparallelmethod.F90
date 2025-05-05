@@ -46,13 +46,13 @@ IF (.NOT. LLINIT) THEN
     ENDDO
     CLOSE (77)
 
-!   IF (LLVERBOSE) THEN
+    IF (LLVERBOSE) THEN
       WRITE (0, *) "------ "//TRIM (CLFILE)//" ------"
       DO I = 1, SIZE (CLNAMES)
         WRITE (0, '(A32," ",A)') CLMETHODS (I), TRIM (CLNAMES (I))
       ENDDO
       WRITE (0, *) "------ "//TRIM (CLFILE)//" ------"
-!   ENDIF
+    ENDIF
 
   ENDIF
 
