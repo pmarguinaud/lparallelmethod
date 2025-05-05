@@ -1,0 +1,1 @@
+FC=/home/gmap/mrpm/marguina/gpupack/support/wrap/NVHPC2405ECTRANSGPU/mpif90 -mp -fPIC -Minfo -gopt -Mlarge_arrays -Mlist -traceback -Mnofma -Mbyteswapio -Mbackslash -Mstack_arrays -cuda -acc=gpu -O1 -gopt -gpu=cc70,cc80 -Minfo=accel,all,ccff
